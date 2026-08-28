@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f7f4ef;
+  --ink: #14231c;
+  --muted: #5c6b63;
+}
+
+.dark {
+  --bg: #0c1612;
+  --ink: #f5f0e8;
+  --muted: #a8b5ad;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(15, 76, 58, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 76, 58, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.dark .bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(196, 163, 90, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(196, 163, 90, 0.06) 1px, transparent 1px);
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition
+      focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-2
+      disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .btn-primary {
+    @apply btn bg-forest-900 text-paper-50 hover:bg-forest-800 dark:bg-gold-400 dark:text-forest-950 dark:hover:bg-gold-300;
+  }
+  .btn-secondary {
+    @apply btn border border-forest-200 bg-white text-forest-900 hover:bg-forest-50
+      dark:border-forest-700 dark:bg-forest-900 dark:text-paper-100 dark:hover:bg-forest-800;
+  }
+  .btn-ghost {
+    @apply btn text-forest-800 hover:bg-forest-100 dark:text-paper-100 dark:hover:bg-forest-800;
+  }
+  .btn-danger {
+    @apply btn bg-red-700 text-white hover:bg-red-800;
+  }
+  .input {
+    @apply w-full rounded-lg border border-forest-200 bg-white px-3 py-2 text-sm text-forest-950
+      placeholder:text-forest-400 shadow-sm
+      focus:border-forest-700 focus:outline-none focus:ring-2 focus:ring-gold-300
+      dark:border-forest-700 dark:bg-forest-950 dark:text-paper-50 dark:placeholder:text-forest-500;
+  }
+  .label {
+    @apply mb-1 block text-xs font-medium uppercase tracking-wide text-forest-700 dark:text-gold-300;
+  }
+  .card {
+    @apply rounded-2xl border border-forest-100 bg-white shadow-card
+      dark:border-forest-800 dark:bg-forest-900/70 dark:shadow-card-dark;
+  }
+  .table-wrap {
+    @apply overflow-x-auto rounded-2xl border border-forest-100 bg-white dark:border-forest-800 dark:bg-forest-900/70;
+  }
+  table.data {
+    @apply w-full text-sm;
+  }
+  table.data th {
+    @apply bg-forest-50 px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-forest-700
+      dark:bg-forest-950 dark:text-gold-300;
+  }
+  table.data td {
+    @apply border-t border-forest-100 px-4 py-3 align-middle dark:border-forest-800;
+  }
+  table.data tr:hover td {
+    @apply bg-forest-50/60 dark:bg-forest-800/40;
+  }
+}

@@ -1,0 +1,3 @@
+matricNumber,firstName,lastName,otherNames,email,phone,gender,dateOfBirth,stateOfOrigin,programme,faculty,department,level,sessionAdmitted
+RUV/2025/CSC/099,Kelechi,Nwankwo,Ife,kelechi.nwankwo@student.ridgeview.edu.ng,08039990001,Male,2006-06-06,Imo,B.Sc. Computer Science,Science,Computer Science,100,2025/2026
+RUV/2025/LAW/099,Bisi,Oladipo,,bisi.oladipo@student.ridgeview.edu.ng,08039990002,Female,2005-04-04,Oyo,LL.B. Law,Law,Public Law,100,2025/2026
