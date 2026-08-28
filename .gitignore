@@ -1,10 +1,12 @@
 node_modules
 .next
 .env
+!prisma/.env
 *.db
 *.db-journal
 prisma/dev.db
 prisma/test.db
 prisma/test.db-journal
+!prisma/seed.db
 .DS_Store
 coverage
